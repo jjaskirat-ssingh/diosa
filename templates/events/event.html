@@ -1,0 +1,236 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>DIOSA - Event Details</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: OnePage - v4.2.0
+  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+   <!-- ======= Header ======= -->
+   <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="{% url 'index' %}">DIOSA</a></h1>
+      
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          
+          
+          
+          
+          
+          <li><a class="getstarted scrollto" href="https://forms.gle/Eeiv1bSzHWQSBuMS6">Become a Member</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Event Details</h2>
+          <ol>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li>Event Details</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper-container">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="{{ event.photo_main.url }}" alt="">
+                </div>
+
+                {% if event.photo_1 %}
+                <div class="swiper-slide">
+                  <img src="{{ event.photo_1.url }}" alt="">
+                </div>
+                {% endif %}
+
+                {% if event.photo_2 %}
+                <div class="swiper-slide">
+                  <img src="{{ event.photo_2.url }}" alt="">
+                </div>
+                {% endif %}
+
+                {% if event.photo_3 %}
+                <div class="swiper-slide">
+                  <img src="{{ event.photo_3.url }}" alt="">
+                </div>
+                {% endif %}
+
+                {% if event.photo_4 %}
+                <div class="swiper-slide">
+                  <img src="{{ event.photo_4.url }}" alt="">
+                </div>
+                {% endif %}
+
+                {% if event.photo_5 %}
+                <div class="swiper-slide">
+                  <img src="{{ event.photo_5.url }}" alt="">
+                </div>
+                {% endif %}
+
+                {% if event.photo_6 %}
+                <div class="swiper-slide">
+                  <img src="{{ event.photo_6.url }}" alt="">
+                </div>
+                {% endif %}
+
+                {% if event.photo_7 %}
+                <div class="swiper-slide">
+                  <img src="{{ event.photo_7.url }}" alt="">
+                </div>
+                {% endif %}
+
+                {% if event.photo_8 %}
+                <div class="swiper-slide">
+                  <img src="{{ event.photo_8.url }}" alt="">
+                </div>
+                {% endif %}
+
+                {% if event.photo_9 %}
+                <div class="swiper-slide">
+                  <img src="{{ event.photo_9.url }}" alt="">
+                </div>
+                {% endif %}
+
+                {% if event.photo_10 %}
+                <div class="swiper-slide">
+                  <img src="{{ event.photo_10.url }}" alt="">
+                </div>
+                {% endif %}
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>{{ event.title }}</h3>
+              <ul>
+                <li><strong>Venue</strong>: {{ event.venue }}</li>
+                <li><strong>Event date</strong>: {{ event.event_date }}</li>
+                
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>Detials of {{ event.title }}:</h2>
+              <p>
+                {{ event.description }}
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+          <div class="container d-md-flex py-4">
+            <div>
+              Doon International<br>
+              Sector-69, Mohali<br>
+              Punjab (160062) <br><br>
+              <strong>Phone:</strong> +91 123456789<br>
+              <strong>Email:</strong> abc@example.com<br>
+            </div>
+            <div class="me-md-auto text-center text-md-start">
+              <div class="copyright">
+                &copy; Copyright <strong><span>DIOSA</span></strong>. All Rights Reserved
+              </div>
+              <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+              </div>
+              
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+        </footer><!-- End Footer -->
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
